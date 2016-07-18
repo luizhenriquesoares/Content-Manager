@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/admin',['uses' => 'ContentsController@index']);
+Route::get('/contents/create',['uses' => 'ContentsController@create']);
+Route::get('/contents/index', ['uses' => 'ContentsController@index']);
+Route::get('/categories/create', ['uses' => 'CategoriesController@create']);
+Route::post('/categories/store', ['uses' => 'CategoriesController@store']);
+
