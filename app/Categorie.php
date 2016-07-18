@@ -13,7 +13,7 @@ class Categorie extends Model
     /**
      * @var array
      */
-    protected $fillable = ['title', 'slug', 'text', 'coverphoto'];
+    protected $fillable = ['title','coverphoto'];
 
     /**
      * @var string

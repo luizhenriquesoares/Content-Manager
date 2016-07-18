@@ -25,10 +25,10 @@ class Content extends Model
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
     public function categories()
     {
-        return $this->belongsTo(Categorie::class);
+        return $this->hasOne(Categorie::class);
     }
 }

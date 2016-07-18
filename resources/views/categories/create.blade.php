@@ -12,8 +12,9 @@
     </section>
 
     <section class="content">
+        @include('flash::message')
         <div class="form-group">
-            {!! Form::open(['url' => 'categories/store']) !!}
+            {!! Form::open(['url' => 'categories/store', 'files' => true]) !!}
 
             {!! Form::label('title', 'Titulo:') !!}
             {!! Form::text('title', null, ['class' => 'form-control']) !!}
@@ -23,8 +24,8 @@
             {!! Form::text('call', null, ['class' => 'form-control']) !!}
         </div>
         <div class="form-group">
-            {!! Form::label('photo', 'Fotos:') !!}
-            {!! Form::file('image') !!}
+            {!! Form::label('Product Image') !!}
+            {!! Form::file('coverphoto') !!}
         </div>
         <div class="form-group">
             {!! Form::submit('Salvar', ['class'=>'btn btn-success']) !!}
