@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use App\Categorie;
+use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use App\Http\Requests\CreateRequestCategories;
 
@@ -55,6 +56,11 @@ class CategoriesController extends Controller
     }
 
     public function update()
+    {
+
+    }
+
+    public function delete()
     {
 
     }

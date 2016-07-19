@@ -1,20 +1,27 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the controller to call when that URI is requested.
-|
-*/
+/**
+ * @router
+ * Cria rota principal para home do painel
+ */
+Route::group(['namespace' => 'Admin'], function() {
+   Route::get('/admin', 'HomeController@index');
+});
+
+Route::group(['namespace' => 'Admin' , 'prefix' => 'admin'], function ()
+{
+    /**
+     * @resource
+     * Cria a rota a para o create / update / delete / store / index / show /  edit
+     */
+
+    Route::resource('/categories', 'CategoriesController');
+    Route::resource('/contents',   'ContentsController');
+    Route::resource('/users',      'UsersController');
+
+});
 
 
-Route::get('/admin',['uses' => 'ContentsController@index']);
-Route::get('/contents/create',['uses' => 'ContentsController@create']);
-Route::get('/contents/index', ['uses' => 'ContentsController@index']);
-Route::get('/categories/create', ['uses' => 'CategoriesController@create']);
-Route::post('/categories/store', ['uses' => 'CategoriesController@store']);
+
+
 
