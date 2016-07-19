@@ -11,6 +11,10 @@ use App\Http\Requests\CreateRequestCategories;
 class CategoriesController extends Controller
 {
 
+    public function __construct()
+    {
+    }
+
     public function index()
     {
         return view('categories.index');
@@ -31,8 +35,10 @@ class CategoriesController extends Controller
      */
     public function store(CreateRequestCategories $request, Categorie $categorie)
     {
+        dd('dsds');
         if ($photo = $request->file('coverphoto')) {
             $data = $request->all();
+            dd($data);
             $data['coverphoto'] = $photo->getClientOriginalName();;
             $request->file('coverphoto')->move(base_path() . '/public/img/categories', $photo->getClientOriginalName());
             $categorie->create($data);

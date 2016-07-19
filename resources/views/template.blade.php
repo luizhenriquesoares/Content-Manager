@@ -96,7 +96,7 @@
                                     <li>
                                         <a href="#">
                                             <div class="pull-left">
-                                                <img src="dist/img/user4-128x128.jpg" class="img-circle"
+                                                <img src="{{URL::asset('dist/img/user4-128x128.jpg')}}" class="img-circle"
                                                      alt="User Image"/>
                                             </div>
                                             <h4>
@@ -109,7 +109,7 @@
                                     <li>
                                         <a href="#">
                                             <div class="pull-left">
-                                                <img src="dist/img/user3-128x128.jpg" class="img-circle"
+                                                <img src="{{URL::asset('dist/img/user3-128x128.jpg')}}" class="img-circle"
                                                      alt="User Image"/>
                                             </div>
                                             <h4>
@@ -122,7 +122,7 @@
                                     <li>
                                         <a href="#">
                                             <div class="pull-left">
-                                                <img src="dist/img/user4-128x128.jpg" class="img-circle"
+                                                <img src="{{URL::asset('dist/img/user4-128x128.jpg')}}" class="img-circle"
                                                      alt="User Image"/>
                                             </div>
                                             <h4>
@@ -259,7 +259,7 @@
                         <ul class="dropdown-menu">
                             <!-- User image -->
                             <li class="user-header">
-                                <img src="dist/img/avatar5.jpg" class="img-circle" alt="User Image"/>
+                                <img src="{{URL::asset('dist/img/avatar5.jpg')}}" class="img-circle" alt="User Image"/>
                                 <p>
 
                                 </p>
@@ -291,13 +291,13 @@
                     <!-- User Account: style can be found in dropdown.less -->
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <img src="dist/img/avatar5.png" class="user-image" alt="User Image">
+                            <img src="{{URL::asset('dist/img/avatar5.png')}}" class="user-image" alt="User Image">
                             <span class="hidden-xs"></span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- User image -->
                             <li class="user-header">
-                                <img src="dist/img/avatar5.png" class="img-circle" alt="User Image">
+                                <img src="{{URL::asset('dist/img/avatar5.png')}}" class="img-circle" alt="User Image">
                                 <p></p>
                             </li>
 
@@ -306,7 +306,7 @@
                             <li class="user-footer">
 
                                 <div class="pull-right">
-                                    <a class="btn btn-default btn-flat" href="./usuarios/logout">Sair</a>
+                                    <a class="btn btn-default btn-flat" href="{{URL::asset('/admin/users/logout')}}">Sair</a>
                                 </div>
                             </li>
                         </ul>
@@ -322,7 +322,7 @@
             <!-- Sidebar user panel -->
             <div class="user-panel">
                 <div class="pull-left image">
-                    <img src="dist/img/avatar5.png" class="img-circle" alt="User Image">
+                    <img src="{{URL::asset('dist/img/avatar5.png')}}" class="img-circle" alt="User Image">
                 </div>
                 <div class="pull-left info">
                     <p></p>
@@ -339,8 +339,8 @@
                         <i class="fa fa-laptop"></i> <span>Conteúdos</span> <i class="fa fa-angle-left pull-right"></i>
                     </a>
                     <ul class="treeview-menu">
-                        <li class="active"><a href="{{URL::asset('contents/create')}}"><i class="fa fa-plus"></i> Cadastrar </a></li>
-                        <li><a href="{{URL::asset('contents/index')}}"><i class="fa fa-cog"></i> Gerenciar</a></li>
+                        <li class="active"><a href="{{URL::asset('admin/contents/create')}}"><i class="fa fa-plus"></i> Cadastrar </a></li>
+                        <li><a href="{{URL::asset('admin/contents/index')}}"><i class="fa fa-cog"></i> Gerenciar</a></li>
                     </ul>
                 </li>
 
@@ -350,8 +350,8 @@
                                 class="fa fa-angle-left pull-right"></i>
                     </a>
                     <ul class="treeview-menu">
-                        <li class="active"><a href="{{URL::asset('categories/create')}}"><i class="fa fa-plus"></i> Cadastrar </a></li>
-                        <li><a href="{{URL::asset('categories/index')}}"><i class="fa fa-cog"></i> Gerenciar</a></li>
+                        <li class="active"><a href="{{URL::asset('admin/categories/create')}}"><i class="fa fa-plus"></i> Cadastrar </a></li>
+                        <li><a href="{{URL::asset('admin/categories/index')}}"><i class="fa fa-cog"></i> Gerenciar</a></li>
                     </ul>
                 </li>
 
@@ -361,8 +361,8 @@
                         <i class="fa fa-user"></i> <span>Usuarios</span> <i class="fa fa-angle-left pull-right"></i>
                     </a>
                     <ul class="treeview-menu">
-                        <li class="active"><a href="users/create"><i class="fa fa-plus"></i> Novo Usuário</a></li>
-                        <li><a href="users/index"><i class="fa fa-cog"></i>Gerenciar</a></li>
+                        <li class="active"><a href="{{URL::asset('admin/users/create')}}"><i class="fa fa-plus"></i> Novo Usuário</a></li>
+                        <li><a href="{{URL::asset('admin/users/index')}}"><i class="fa fa-cog"></i>Gerenciar</a></li>
                     </ul>
                 </li>
 
@@ -378,8 +378,6 @@
         <section class="content-header">
             @yield('content')
         </section>
-
-
 
     </div><!-- /.content-wrapper -->
     <footer class="main-footer">

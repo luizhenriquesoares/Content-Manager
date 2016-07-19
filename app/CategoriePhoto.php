@@ -9,7 +9,7 @@ class CategoriePhoto extends Model
     /**
      * @var array
      */
-    protected $fillable = ['url', 'slug', 'text', 'coverphoto'];
+    protected $fillable = ['url', 'categories_id'];
 
     /**
      * @var array
